@@ -5,11 +5,11 @@
 
 <br>
 
-## Comandos de Configuração ##
+## Configurando Git ##
 
 > `git --version`
 
-##### ^ Utilizado para ver qual a versão do seu GIT <br><br><br>
+##### ^ Mostra a versão do seu Git <br><br><br>
 
 > `git config --local user.name "Seu Nome"`
 
@@ -17,7 +17,7 @@
 
 > `git config --local user.email "Seu email"`
 
-##### ^ Utilizado determinar o user email do repositório _local_. <br> Para determinar o user email _global_, bastar trocar o ```--local``` para ```--global```. <br><br><br>
+##### ^ Utilizado determinar o user email do repositório _local_. <br> Para determinar o user email _global_, bastar trocar o ```--local``` para ```--global```. <br><br><br><br>
 
 ## Criando repositório e commitando ##
 
@@ -27,11 +27,11 @@
 
 > `git init --bare`
 
-##### ^ Inicializa o repositório local puro, o qual irá armazenar apenas as altações dos arquivos <br><br><br>
+##### ^ Inicializa o repositório local puro, o qual irá armazenar apenas as alterações de arquivos <br><br><br>
 
 > `git add nome_arquivo`
 
-##### ^ Adiciona um determinado aquivo ao repositório. <br> Para adicionar todos os arquivos de uma pastar, basta trocar o `nome_arquivo` para `.`<br><br><br>
+##### ^ Adiciona um determinado arquivo ao repositório. <br> Para adicionar todos os arquivos de uma pasta, basta trocar o `nome_arquivo` para `.`<br><br><br>
 
 > `git commit -m "Mensagem de commit"`
 
@@ -39,7 +39,7 @@
 
 > `mkdir nome_pasta`
 
-##### ^ Cria um repositório local pelo _Git Bash_ <br><br><br>
+##### ^ Cria um repositório local pelo _Git Bash_ <br><br><br><br>
 
 ## Criando uma conexão ##
 
@@ -57,23 +57,23 @@
 
 > `git remote rm nome_conexao`
 
-##### ^ Remove a conexão `nome_conexao` <br><br><br>
+##### ^ Remove a conexão `nome_conexao` <br><br><br><br>
 
 ## Enviando arquivos do repositório local para o remoto ##
 
 > `git push nome_conexao nome_branch`
 
-##### ^ Envia os arquivos presentes na branch `nome_branch` para o repositório remoto `link_conexao` <br><br><br>
+##### ^ Envia os arquivos presentes na branch `nome_branch` para o repositório remoto `nome_conexao` <br><br><br>
 
 > `git push -u nome_conexao nome_branch`
 
-##### ^ Toda vez que der um `git push` vai enviar os arquivos presentes na branch `nome_branch` para o repositório remoto `link_conexao` <br><br><br>
+##### ^ Toda vez que der um `git push` vai enviar os arquivos presentes na branch `nome_branch` para o repositório remoto `nome_conexao` <br><br><br><br>
 
 ## Trazendo arquivos do repositório remoto para o local ##
 
 > `git pull nome_conexao nome_branch`
 
-##### ^ Traz os arquivos do repositório remoto para o local <br><br><br>
+##### ^ Traz os arquivos do repositório remoto para o local <br><br><br><br>
 
 ## Criando e mudando de branchs ##
 
@@ -95,7 +95,7 @@
 
 > `git checkout [hash abrev.]`
 
-##### ^ Navega pela linha do tempo dos commits <br><br><br>
+##### ^ Navega pela linha do tempo dos commits <br><br><br><br>
 
 ## Analisando Logs ##
 
@@ -127,7 +127,7 @@
 
 ##### ^ Mostra as diferenças desde o commit indicado <br><br>
 
-[Para mais informações sobre Git Logs](https://devhints.io/git-log) <br><br>
+[Para mais informações sobre Git Logs](https://devhints.io/git-log) <br><br><br>
 
 ## Juntando arquivos de duas _branchs_ distintas ##
 
@@ -139,7 +139,7 @@
 
 ##### ^ Commita e aplica os commits da branch `nome_branch` na atual, trazendo todo o histórico da `nome_branch`.  <br><br>
 
-[Para saber mais sobre Git Merge e Rebase](https://www.edureka.co/blog/git-rebase-vs-merge/) <br><br>
+[Para saber mais sobre Git Merge e Rebase](https://www.edureka.co/blog/git-rebase-vs-merge/) <br><br><br>
 
 ## Desfazendo alterações(CTRL+Z no GIT) ##
 
@@ -153,7 +153,7 @@
 
 > `git revert [hash do commit]`
 
-##### ^ Desfaz as alterações mesmo depois de um `git commit`  <br><br><br>
+##### ^ Desfaz as alterações mesmo depois de um `git commit`  <br><br><br><br>
 
 ## Salvando mudanças temporariamente sem usar `git commit` ##
 
@@ -175,10 +175,10 @@
 
 > `git stash pop`
 
-##### ^ Atalho para o `git apply` e o `git drop` juntos da última alteração da stash  <br><br>
+##### ^ Atalho para o `git stash apply` e o `git stash drop` juntos da última alteração da stash  <br><br>
 
 [Para saber mais sobre Git Stashes(opção 1)](https://blog.betrybe.com/git/git-stash/) <br>
-[Para saber mais sobre Git Stashes(opção 2)](https://git-scm.com/docs/git-stash) <br><br>
+[Para saber mais sobre Git Stashes(opção 2)](https://git-scm.com/docs/git-stash) <br><br><br>
 
 ## Criandos Tags e Releases ##
 
@@ -188,11 +188,11 @@
 
 > `git push nome_conexão nome_tag`
 
-##### ^ Envia a tag/release oara o repositório remoto <br><br><br>
+##### ^ Envia a tag/release para o repositório remoto <br><br><br><br>
 
 ## Junção de Commits ##
 
-> `git rebase -i HEAD [hash do commit anterio aos que você quer juntar]`
+> `git rebase -i HEAD [hash do commit anterior ao que você quer juntar]`
 
 ##### ^ Faz a junção de _commits_ <br><br><br>
 
@@ -202,7 +202,7 @@
 
 > `git cherry-pick [hash]`
 
-##### ^ Traz o _commit_ selecionado para a branch que você está <br><br><br>
+##### ^ Traz o _commit_ selecionado para a branch que você está <br><br><br><br>
 
 ## Encontrando erros e buscando por _Commits_ ##
 
@@ -235,11 +235,11 @@
 ##### ^ Mostra as alterações que foram feitas <br><br><br>
 
 [Para saber mais sobre Git Bisect e busca de erros(Opção 1)](https://git-scm.com/docs/git-bisect) <br>
-[Para saber mais sobre Git Bisect e busca de erros(Opção 2)](https://brizeno.wordpress.com/2012/11/07/encontrando-erros-com-git-bisect/) <br><br>
+[Para saber mais sobre Git Bisect e busca de erros(Opção 2)](https://brizeno.wordpress.com/2012/11/07/encontrando-erros-com-git-bisect/) <br><br><br>
 
 ## Fork ##
 
-  O Fork faz uma cópia do repositório do Github de uma pessoa, para o seu Github.
+  O Fork faz uma cópia do repositório do Github de uma pessoa, para o seu Github.<br><br>
 
 ## Pull Request ##
 
