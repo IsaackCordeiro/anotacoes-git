@@ -69,6 +69,12 @@
 
 ##### ^ Toda vez que der um `git push` vai enviar os arquivos presentes na branch `nome_branch` para o repositório remoto `link_conexao` <br><br><br>
 
+## Trazendo arquivos do repositório remoto para o local ##
+
+> `git pull nome_conexao nome_branch`
+
+##### ^ Traz os arquivos do repositório remoto para o local <br><br><br>
+
 ## Criando e mudando de branchs ##
 
 > `git branch`
@@ -121,7 +127,7 @@
 
 ##### ^ Mostra as diferenças desde o commit indicado <br><br>
 
-[Para mais informações sobre Git Logs](https://devhints.io/git-log) <br><br><br>
+[Para mais informações sobre Git Logs](https://devhints.io/git-log) <br><br>
 
 ## Juntando arquivos de duas _branchs_ distintas ##
 
@@ -133,7 +139,7 @@
 
 ##### ^ Commita e aplica os commits da branch `nome_branch` na atual, trazendo todo o histórico da `nome_branch`.  <br><br>
 
-[Para saber mais sobre Git Merge e Rebase](https://www.edureka.co/blog/git-rebase-vs-merge/)
+[Para saber mais sobre Git Merge e Rebase](https://www.edureka.co/blog/git-rebase-vs-merge/) <br><br>
 
 ## Desfazendo alterações(CTRL+Z no GIT) ##
 
@@ -169,8 +175,72 @@
 
 > `git stash pop`
 
-##### ^ Atalho para o `git apply` e o `git drop` juntos da última alteração da stash  <br><br><br>
+##### ^ Atalho para o `git apply` e o `git drop` juntos da última alteração da stash  <br><br>
 
 [Para saber mais sobre Git Stashes(opção 1)](https://blog.betrybe.com/git/git-stash/) <br>
-[Para saber mais sobre Git Stashes(opção 2)](https://git-scm.com/docs/git-stash)
+[Para saber mais sobre Git Stashes(opção 2)](https://git-scm.com/docs/git-stash) <br><br>
 
+## Criandos Tags e Releases ##
+
+> `git tag -a v0.1.0`
+
+##### ^ Cria uma tag como se fosse uma release da aplicação <br><br><br>
+
+> `git push nome_conexão nome_tag`
+
+##### ^ Envia a tag/release oara o repositório remoto <br><br><br>
+
+## Junção de Commits ##
+
+> `git rebase -i HEAD [hash do commit anterio aos que você quer juntar]`
+
+##### ^ Faz a junção de _commits_ <br><br><br>
+
+> `git rebase -i HEAD~2`
+
+##### ^ Faz a junção dos dois últimos _commits_ <br><br><br>
+
+> `git cherry-pick [hash]`
+
+##### ^ Traz o _commit_ selecionado para a branch que você está <br><br><br>
+
+## Encontrando erros e buscando por _Commits_ ##
+
+> `git bisect start`
+
+##### ^ Inicializa a busca por _commits_ <br><br><br>
+
+> `git bisect bad HEAD`
+
+##### ^ Informa para o git onde está o bug <br><br><br>
+
+> `git bisect good [hash]`
+
+##### ^ Informa para o git até onde você quer fazer a busca <br><br><br>
+
+> `git bisect good`
+
+##### ^ Informa para o git que naquele _commit_ está ok <br><br><br>
+
+> `git bisect bad`
+
+##### ^ Informa para o git que naquele _commit_ está o erro <br><br><br>
+
+> `git bisect reset`
+
+##### ^ Encerra a busca <br><br><br>
+
+> `git show [hash]`
+
+##### ^ Mostra as alterações que foram feitas <br><br><br>
+
+[Para saber mais sobre Git Bisect e busca de erros(Opção 1)](https://git-scm.com/docs/git-bisect) <br>
+[Para saber mais sobre Git Bisect e busca de erros(Opção 2)](https://brizeno.wordpress.com/2012/11/07/encontrando-erros-com-git-bisect/) <br><br>
+
+## Fork ##
+
+  O Fork faz uma cópia do repositório do Github de uma pessoa, para o seu Github.
+
+## Pull Request ##
+
+  O Pull Request faz um pedido de envio de modificação a um código de alguém
